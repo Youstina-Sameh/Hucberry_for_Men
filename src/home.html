@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header>
+    <div class="bg-slate-900 text-white py-5 text-center divide-x">
+      <span class="pl-14 pr-14">Free U.S Snip</span><span class="pl-14 pr-14">Free U.S Returns</span><span
+        class="pl-14 pr-14">Best Price Gauranted</span>
+    </div>
+
+    <div class="mt-4">
+      <div class="inline relative ml-28 text-2xl text-slate-900">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <input type="search" id="default-search"
+          class="ps-12 border border-none focus:ring-blue-500 placeholder:text-slate-900" placeholder="Search" />
+      </div>
+      <div class="brand-Name inline text-slate-900 text-5xl font-bold pl-20">
+        <a href="#"><i class="fa-solid fa-tree"></i> Hucberry</a>
+      </div>
+      <div class="inline text-3xl ml-96">
+        <span><a href="#"><i class="fa-regular fa-user"></i></a></span>
+        <span><a href="#"><i class="fa-solid fa-bag-shopping pl-5"></i></a></span>
+      </div>
+    </div>
+    <div class="mt-8">
+      <nav class="text-center text-base font-semibold"><a href="#" class="px-2">New</a><a href="#"
+          class="px-2">Bestsellers</a><a href="#" class="px-2">Funt&Tinder</a><a href="#" class="px-2">Shop
+          By</a><a href="#" class="px-2">Clothing</a><a href="#" class="px-2">Footwear</a><a href="#"
+          class="px-2">Home</a><a href="#" class="px-2">Gear</a><a href="#" class="px-2">Gifts</a><a href="#"
+          class="px-2">Sales</a></nav>
+    </div>
+  </header>
+
+  <div class="mt-5">
+    <div class="sliderAx h-96">
+      <div id="slider-1" class="slider mx-auto">
+        <div class="bg-cover bg-center h-[500px]  text-white py-24 px-10 object-fill"
+          style="background-image: url('./imgs/img1.jpeg')">
+          <p class="font-bold text-xl uppercase">Goruck + Micheal Easter</p>
+          <p class="text-5xl font-bold">THE 2% BAG</p>
+          <p class="text-3xl mb-10 leading-none">________________System</p>
+          <span class="bg-orange-600 text-black p-3 font-bold"><a href="#">Shop Now</a></span>
+        </div>
+      </div>
+
+      <div id="slider-2" class="slider mx-auto">
+        <div class="bg-cover bg-top h-[500px]  text-white py-24 px-10 object-fill"
+          style="background-image: url('./imgs/img2.jpeg')">
+          <p class="font-bold text-sm uppercase">Goruck + Micheal Easter</p>
+          <p class="text-5xl font-bold">THE 2% BAG</p>
+          <p class="text-3xl mb-10 leading-none">________________System</p>
+          <span class="bg-orange-600 text-black p-3 font-bold"><a href="#">Shop Now</a></span>
+        </div>
+      </div>
+
+      <div id="slider-3" class="slider  mx-auto">
+        <div class="bg-cover bg-top h-[500px]  text-white py-24 px-10 object-fill"
+          style="background-image: url('./imgs/img3.jpg')">
+          <p class="font-bold text-sm uppercase">Goruck + Micheal Easter</p>
+          <p class="text-5xl font-bold">THE 2% BAG</p>
+          <p class="text-3xl mb-10 leading-none">________________System</p>
+          <span class="bg-orange-600 text-black p-3 font-bold"><a href="#">Shop Now</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center space-x-3 mt-20 pb-4">
+      <button id="sButton1" class="slider-button border-2 rounded-full w-4 p-2"></button>
+      <button id="sButton2" class="slider-button border-2 rounded-full w-4 p-2"></button>
+      <button id="sButton3" class="slider-button border-2 rounded-full w-4 p-2"></button>
+    </div>
+    <div class="bg-myColor font-semibold p-2 mb-10">
+      <p class="text-center ">The One Stop Man’s Shop</p>
+    </div>
+  </div>
+
+  <!--cuarsol-->
+  <div class=" mx-auto p-4 pt-20">
+    <div class="flex items-start">
+      <!-- Header Section -->
+      <div class="w-52 flex-shrink-0 pt-20 pl-8">
+        <h2 class="text-yellow-500 text-4xl font-bold">416</h2>
+        <h3 class="text-2xl font-bold pb-3">New Arrivals</h3>
+        <a href="#" class="text-black font-semibold yellow-underline text-3xl">shop All</a>
+      </div>
+
+      <!-- Carousel Container (Takes remaining width) -->
+      <div class="flex-grow relative overflow-hidden">
+        <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
+          <!-- First Slide -->
+          <div class="w-full flex gap-4 shrink-0">
+            <!-- Product 1 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/glasses.png" class="w-full h-48 object-cover pt-8" alt="Sunglasses">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-2xl text-gray-600 mt-2 font-semibold">SUNSKI</h4>
+              <p class="text-2xl font-bold">Estero Sunglasses</p>
+              <p class="text-2xl font-semibold">$98</p>
+            </div></div>
+
+            <!-- Product 2 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/shirt.png" class="w-full h-48 pt-8" alt="Shirt">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-2xl text-gray-600 mt-2 font-semibold">MARINE LAYER</h4>
+              <p class="text-2xl font-bold">Long Sleeve Shirt</p>
+              <p class="text-2xl font-semibold">$118</p>
+            </div></div>
+
+            <!-- Product 3 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/short.png" class="w-full h-48 object-coverpt-8" alt="Shorts">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-2xl text-gray-600 mt-2 font-semibold">FUNT AND TINDER</h4>
+              <p class="text-2xl font-bold">Cotton Short</p>
+              <p class="text-2xl font-semibold">$88</p>
+            </div></div>
+
+            <!-- Product 4 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/shooes.png" class="w-full h-48 pt-8" alt="Shoes">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-sm text-gray-500 mt-2 font-semibold">SABAH</h4>
+              <p class="text-2xl font-bold">Sabah Shoe</p>
+              <p class="text-2xl font-semibold">$150</p>
+            </div></div>
+          </div>
+
+          <!-- Second Slide -->
+          <div class="w-full flex gap-4 shrink-0">
+            <!-- Product 5 -->
+            <div class="bg-myColor  relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/jacket.png" class="w-full h-52 pt-8" alt="Bag">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-2xl text-gray-600 mt-2 font-semibold">BRAND NAME</h4>
+              <p class="text-2xl font-bold">Stylish Bag</p>
+              <p class="text-lg font-semibold">$120</p>
+            </div></div>
+
+            <!-- Product 6 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/sleeves.png" class="w-full h-52 pt-8 " alt="Hat">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-2xl text-gray-600 mt-2 font-semibold">BRAND NAME</h4>
+              <p class="text-2xl font-bold">Summer Hat</p>
+              <p class="text-lg font-semibold">$75</p>
+            </div></div>
+
+            <!-- Product 7 -->
+            <div class="bg-myColor  relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/pants1.png" class="w-full h-52 pt-8 " alt="Watch">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-2xl text-gray-600 mt-2 font-semibold">BRAND NAME</h4>
+              <p class="text-2xl font-bold">Luxury Watch</p>
+              <p class="text-lg font-semibold">$250</p>
+            </div></div>
+
+            <!-- Product 8 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/pants2.png" class="w-full h-52 pt-8 " alt="Belt">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-2xl text-gray-600 mt-2 font-semibold">BRAND NAME</h4>
+              <p class="text-2xl font-bold">Leather Belt</p>
+              <p class="text-lg font-semibold">$65</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="prev-btn" 
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-yellow-400 p-3 text-white z-10">❮</button>
+        <button id="next-btn"
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-yellow-400 p-3 text-white z-10">❯</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="bg-myColor m-14 p-12 h-[1000px]">
+    <div class="flex justify-center h-[350px] min-w-full">
+      <div class="bg-mybgImg1 w-1/4 text-white pt-20 pb-20 pl-7">
+        <p class="text-2xl pb-3">JUST DROPPED</p>
+        <p class="text-4xl pb-5 font-myfont font-bold">Relwen Spring</p>
+        <p class="text-xl underline"><a href="#">SHOP NOW</a></p>
+      </div>
+      <div class="w-3/4 ">
+        <img src="./imgs/bg-2.jpeg" class="h-[350px] min-w-full" alt="">
+      </div>
+    </div>
+
+    <div class="flex mt-20">
+      <div class="p-4 relative w-1/4">
+        <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500  bg-white p-2 m-3 rounded-2xl"
+          onclick="toggleSave(this)"></i>
+        <img src="./imgs/jacket.png" alt="" class="mt-4 h-52">
+        <div class="mt-5">
+          <h4 class="text-secondColor text-lg ">RELWEN</h4>
+          <p class="font-bold text-lg">Canva Coat</p>
+          <p class="font-bold text-lg">$98</p>
+        </div>
+        <div class="flex space-x-2 mt-2">
+          <label class="relative">
+            <input type="radio" name="jacketcolor" value="brown" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-orange-900 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="jacketcolor" value="olive" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-[#DBCA6D] border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" checked name="jacketcolor" value="purple" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-violet-800 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+        </div>
+      </div>
+      <div class="p-4 relative w-1/4">
+        <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500  bg-white p-2 m-3 rounded-2xl"
+          onclick="toggleSave(this)"></i>
+        <img src="./imgs/pants1.png" alt="" class="mt-4 h-52">
+        <div class="mt-5">
+          <h4 class="text-secondColor text-lg ">RELWEN</h4>
+          <p class="font-bold text-lg">Flyweight Flex</p>
+          <p class="font-bold text-lg">$198</p>
+        </div>
+        <div class="flex space-x-2 mt-2">
+          <label class="relative">
+            <input type="radio" name="pants1Color" value="brown" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-yellow-900 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="pants1Color" value="olive" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-blue-900 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" checked name="pants1Color" value="purple" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-[#DBCA6D] border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+        </div>
+      </div>
+      <div class="p-4 relative w-1/4">
+        <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500  bg-white p-2 m-3 rounded-2xl"
+          onclick="toggleSave(this)"></i>
+        <img src="./imgs/sleeves.png" alt="" class="mt-4 h-52">
+        <div class="mt-5">
+          <h4 class="text-secondColor text-lg ">RELWEN</h4>
+          <p class="font-bold text-lg">Long Sleeve Polo</p>
+          <p class="font-bold text-lg">$258</p>
+        </div>
+        <div class="flex space-x-2 mt-2">
+          <label class="relative">
+            <input type="radio" name="sleevesColor" value="brown" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-orange-500 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="sleevesColor" value="olive" checked class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-gray-400 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="sleevesColor" value="purple" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-blue-400 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+        </div>
+      </div>
+      <div class="p-4 relative w-1/4">
+        <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500  bg-white p-2 m-3 rounded-2xl"
+          onclick="toggleSave(this)"></i>
+        <img src="./imgs/blueShort.png" alt="" class="mt-4 h-52">
+        <div class="mt-5">
+          <h4 class="text-secondColor text-lg ">RELWEN</h4>
+          <p class="font-bold text-lg">Flex Short</p>
+          <p class="font-bold text-lg">$250</p>
+        </div>
+        <div class="flex space-x-2 mt-2">
+          <label class="relative">
+            <input type="radio" name="shortcolor" value="brown" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-[#DBCA6D] border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="shortcolor" value="olive" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-red-950 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="shortcolor" checked value="purple" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-blue-950 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+        </div>
+      </div>
+      <div class="p-4 relative w-1/4">
+        <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500  bg-white p-2 m-3 rounded-2xl"
+          onclick="toggleSave(this)"></i>
+        <img src="./imgs/pants2.png" alt="" class="mt-4 h-52">
+        <div class="mt-5">
+          <h4 class="text-secondColor text-lg ">RELWEN</h4>
+          <p class="font-bold text-lg">Cargo Pant</p>
+          <p class="font-bold text-lg">$300</p>
+        </div>
+        <div class="flex space-x-2 mt-2">
+          <label class="relative">
+            <input type="radio" name="color" value="brown" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-[#8B5E3B] border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="color" checked value="olive" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-[#A79C68] border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+
+          <label class="relative">
+            <input type="radio" name="color" value="purple" class="peer hidden">
+            <span
+              class="w-5 h-5 rounded-full bg-blue-950 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <h2 class="text-center mt-14 text-3xl font-bold yellow-underline"><a href="#">SHOP  RELWEN</a></h2>
+  </div>
+
+
+
+  <div class="mx-auto  pt-20">
+    <div class="flex items-start">
+      <!-- Header Section -->
+      <div class="w-52 flex-shrink-0 pt-20 pl-8">
+        <h3 class="text-2xl font-bold pb-3">Anchor Your
+          Spring Style</h3>
+        <a href="#" class="text-black font-bold yellow-underline text-xl">SHOP NEW FOOTWEAR</a>
+      </div>
+  
+      <!-- Shoes Carousel -->
+      <div class="flex-grow relative overflow-hidden">
+        <div id="shoes-carousel-track" class="flex transition-transform duration-500 ease-in-out">
+          <!-- First Slide -->
+          <div class="w-full flex gap-4 shrink-0">
+            <!-- Shoe 1 -->
+            <div class="bg-myColor  relative w-1/4h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/shemoah.png" class="w-full h-48 object-cover p-4" alt="Sneakers">
+              <div class="bg-white absolute bottom-0 w-full ">
+              <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+              <p class="font-semibold pb-2">Ultra Boost</p>
+              <p class="text-lg font-semibold pb-3">$110</p>
+              </div>
+            </div>
+  
+            <!-- Shoe 2 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/pinkShoose.png" class="w-full h-48 object-cover" alt="Boots">
+              <div class="bg-white absolute bottom-0 w-full ">
+                <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+                <p class="font-semibold pb-2">Ultra Boost</p>
+                <p class="text-lg font-semibold pb-3">$110</p>
+              </div>
+            </div>
+  
+            <!-- Shoe 3 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/whiteshose.png" class="w-full h-48 object-cover pb-10" alt="Running Shoes">
+              <div class="bg-white absolute bottom-0 w-full ">
+                <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+                <p class="font-semibold pb-2">Ultra Boost</p>
+                <p class="text-lg font-semibold pb-3">$110</p>
+              </div>
+            </div>
+  
+            <!-- Shoe 4 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/sandal.png" class="w-full h-48 object-cover" alt="Formal Shoes">
+              <div class="bg-white absolute bottom-0 w-full ">
+                <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+                <p class="font-semibold pb-2">Ultra Boost</p>
+                <p class="text-lg font-semibold pb-3">$110</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Second Slide -->
+          <div class="w-full flex gap-4 shrink-0">
+            <!-- Shoe 5 -->
+            <div class="bg-myColor  relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/shoe5.png" class="w-full h-48 object-cover" alt="Casual Sneakers">
+              <div class="bg-white absolute bottom-0 w-full ">
+                <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+                <p class="font-semibold pb-2">Ultra Boost</p>
+                <p class="text-lg font-semibold pb-3">$110</p>
+              </div>
+            </div>
+  
+            <!-- Shoe 6 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/shoe6.png" class="w-full h-48 object-cover" alt="Loafers">
+              <div class="bg-white absolute bottom-0 w-full ">
+                <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+                <p class="font-semibold pb-2">Ultra Boost</p>
+                <p class="text-lg font-semibold pb-3">$110</p>
+              </div>
+            </div>
+  
+            <!-- Shoe 7 -->
+            <div class="bg-myColor  relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+              <img src="./imgs/shoe7.png" class="w-full h-48 object-cover" alt="Slip-Ons">
+              <div class="bg-white absolute bottom-0 w-full ">
+                <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+                <p class="font-semibold pb-2">Ultra Boost</p>
+                <p class="text-lg font-semibold pb-3">$110</p>
+              </div>
+            </div>
+  
+            <!-- Shoe 8 -->
+            <div class="bg-myColor relative w-1/4 h-[410px]">
+              <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 text-2xl"
+                onclick="toggleSave(this)"></i>
+                <div class="bg-white absolute bottom-0 w-full ">
+                  <h4 class="text-sm text-gray-500 mt-2 font-semibold">ADIDAS</h4>
+                  <p class="font-semibold pb-2">Ultra Boost</p>
+                  <p class="text-lg font-semibold pb-3">$110</p>
+                </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Navigation Buttons -->
+        <button id="shoes-prev-btn"
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-yellow-400 p-3 text-white z-10">❮</button>
+        <button id="shoes-next-btn"
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-yellow-400 p-3 text-white z-10">❯</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!--jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj-->
+  <div class="mt-20">
+    <div class="flex"><h2 class="text-4xl ml-12 mr-96 font-bold">Wardrobe Essentials</h2> <a href="#" class="text-black font-bold yellow-underline text-2xl pl-52 ml-60">shop All</a></div>
+    <div class="flex justify-center gap-6 w-[1250px] ml-12 mt-5">
+      <div class="w-1/4 h-96 bg-mybgwallpaer"><img src="./imgs/collectionTshirts.png" class="object-cover" alt=""><h3 class="text-2xl font-semibold pt-3">T-Shirts</h3></div>
+      <div class="w-1/4 h-96"><img src="./imgs/pants3.jpeg" class="object-cover h-96" alt=""> <h3 class="text-2xl font-semibold pt-3">Pants</h3></div>
+      <div class="w-1/4 h-96"><img src="./imgs/blackJacket.jpeg" class="object-cover" alt=""> <h3 class="text-2xl font-semibold pt-3">Jackets</h3></div>
+      <div class="w-1/4 h-96"><img src="./imgs/shirtsCollection.jpeg" class="object-cover" alt=""> <h3 class="text-2xl font-semibold pt-3">Button Up Shirts</h3></div>
+    </div>
+  </div>
+
+
+  <div class="bg-mySecwallpaer flex gap-12 w-[1250px] ml-12 mt-24">
+    <div class="text-white mt-20 ml-14 mr-[300px]">
+      <p class="font-semibold pl-10 text-2xl">72 - HOUR COLLECTION</p>
+      <a href="#" class="pl-36 ml-14 text-xl underline">SHOP NOW</a>
+    </div>
+    <div class="flex gap-4 pt-7 pb-7">
+     <img src="./imgs/modell2.jpeg" class="w-52 h-60" alt="">
+     <img src="./imgs/modell3.jpeg" class="w-52 h-56" alt="">
+  </div></div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
