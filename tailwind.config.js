@@ -14,6 +14,9 @@ module.exports = {
       },
       fontFamily: {
         'myfont': 'kreon',
+        'kaushan': ['"Kaushan Script"', 'cursive'],
+        'nerko': ['"Nerko One"', 'cursive'],
+        'Kavoon':['Kavoon'],
       },
     },
   },
