@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -294,7 +294,7 @@
       <div class="p-4 relative w-1/4">
         <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 bg-white p-2 m-3 rounded-2xl"
           onclick="toggleSave(this)"></i>
-        <img src="./imgs/jacket.png" alt="" class="mt-4 h-64" />
+        <img id="blueJacket" src="./imgs/jacket.png" alt="" class="mt-4 h-64" />
         <div class="mt-5">
           <h4 class="text-secondColor text-2xl font-semibold">RELWEN</h4>
           <p class="text-2xl font-bold">Canva Coat</p>
@@ -308,13 +308,13 @@
           </label>
 
           <label class="relative">
-            <input type="radio" name="jacketcolor" value="olive" class="peer hidden" />
+            <input type="radio" name="jacketcolor" onclick="changeJacketColor()" value="olive" class="peer hidden" />
             <span
               class="w-5 h-5 rounded-full bg-[#DBCA6D] border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
           </label>
 
           <label class="relative">
-            <input type="radio" checked name="jacketcolor" value="purple" class="peer hidden" />
+            <input type="radio" onclick="backToblueJacket()" checked name="jacketcolor" value="purple" class="peer hidden" />
             <span
               class="w-5 h-5 rounded-full bg-blue-900 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
           </label>
@@ -352,7 +352,7 @@
       <div class="p-4 relative w-1/4">
         <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 bg-white p-2 m-3 rounded-2xl"
           onclick="toggleSave(this)"></i>
-        <img src="./imgs/sleeves.png" alt="" class="mt-4 h-64" />
+        <img src="./imgs/sleeves.png" id="sleevesPol" alt="" class="mt-4 h-64" />
         <div class="mt-5">
           <h4 class="text-secondColor text-2xl font-semibold">RELWEN</h4>
           <p class="font-bold text-2xl">Long Sleeve Polo</p>
@@ -366,13 +366,13 @@
           </label>
 
           <label class="relative">
-            <input type="radio" name="sleevesColor" value="olive" checked class="peer hidden" />
+            <input type="radio" onclick="backTopolColor()" name="sleevesColor" value="olive" checked class="peer hidden" />
             <span
               class="w-5 h-5 rounded-full bg-gray-400 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
           </label>
 
           <label class="relative">
-            <input type="radio" name="sleevesColor" value="purple" class="peer hidden" />
+            <input type="radio" onclick="changepolColor()" name="sleevesColor" value="purple" class="peer hidden" />
             <span
               class="w-5 h-5 rounded-full bg-blue-400 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
           </label>
@@ -381,7 +381,7 @@
       <div class="p-4 relative w-1/4">
         <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 bg-white p-2 m-3 rounded-2xl"
           onclick="toggleSave(this)"></i>
-        <img src="./imgs/blueShort.png" alt="" class="mt-4 h-64" />
+        <img src="./imgs/blueShort.png" alt="" class="mt-4 object-cover pt-8 pb-24" />
         <div class="mt-5">
           <h4 class="text-secondColor text-2xl font-semibold">RELWEN</h4>
           <p class="font-bold text-2xl">Flex Short</p>
@@ -410,7 +410,7 @@
       <div class="p-4 relative w-1/4">
         <i class="fa-regular fa-bookmark absolute top-2 right-2 text-gray-500 bg-white p-2 m-3 rounded-2xl"
           onclick="toggleSave(this)"></i>
-        <img src="./imgs/pants2.png" alt="" class="mt-4 h-64" />
+        <img src="./imgs/pants2.png" id="greenJacket" alt="" class="mt-4 h-64" />
         <div class="mt-5">
           <h4 class="text-secondColor text-2xl font-semibold">RELWEN</h4>
           <p class="font-bold text-2xl">Cargo Pant</p>
@@ -424,15 +424,15 @@
           </label>
 
           <label class="relative">
-            <input type="radio" name="color" checked value="olive" class="peer hidden" />
+            <input type="radio" name="color" onclick="backToJacketColor()" checked value="olive" class="peer hidden" />
             <span
               class="w-5 h-5 rounded-full bg-[#A79C68] border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
           </label>
 
           <label class="relative">
-            <input type="radio" name="color" value="purple" class="peer hidden" />
+            <input type="radio" name="color" onclick="changepantsColor()" value="purple" class="peer hidden" />
             <span
-              class="w-5 h-5 rounded-full bg-blue-950 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
+              class="w-5 h-5 rounded-full bg-red-950 border border-gray-300 block peer-checked:ring-2 peer-checked:ring-black"></span>
           </label>
         </div>
       </div>
@@ -625,8 +625,8 @@
         <img src="./imgs/modell3.jpeg" class="w-72 h-[360px] mt-7" alt="" />
         <p
           class="absolute top-1/2 left-[95%] -translate-x-1/2 -translate-y-1/2 text-white font-normal text-3xl flex items-center">
-          <span class="text-white rotate-[270deg] font-normal text-4xl">PROOF</span>
-          <span class="whitespace-nowrap">SPRING 25</span>
+          <span class="text-white rotate-[270deg] font-normal text-4xl p-0 m-0">PROOF</span>
+          <span class="whitespace-nowrap">SPRING 25</span></p>
       </div>
     </div>
   </div>
@@ -787,40 +787,40 @@
           <!-- Fav Brand  Carousel -->
           <div class="flex-grow relative overflow-hidden">
             <div id="favPrand-carousel-track" class="flex transition-transform duration-500 ease-in-out">
-<!-- First Slide -->
-<div class="w-full flex gap-4 shrink-0 overflow-x-auto">
-  <!-- fav 1 -->
-  <div class="relative w-[316px] h-[430px]">
-    <img src="./imgs/favBrand4.jpeg" class="w-full object-cover h-full" alt="favBrand1" />
-    <div class="absolute bottom-8 ml-4 text-white font-semibold text-2xl font-nerko">
-      FLINT AND TINDER
-    </div>
-  </div>
-   
-  <!-- fav 2 -->
-  <div class="relative w-[316px] h-[430px]">
-    <img src="./imgs/pants3.jpeg" class="w-full object-cover h-full" alt="pants3" />
-    <div class="absolute bottom-8 ml-14 text-white font-normal font-kaushan text-5xl">
-      artolflex
-    </div>
-  </div>
-  
-  <!-- fav 3 -->
-  <div class="relative w-[316px] h-[430px]">
-    <img src="./imgs/favBrand2.jpeg" class="w-full object-cover h-full" alt="pants3" />
-    <div class="absolute bottom-8 ml-12 text-white font-normal text-5xl font-nerko">
-      RELWEN
-    </div>
-  </div>
- 
-  <!-- fav 4 -->
-  <div class="relative w-[316px] h-[430px]">
-    <img src="./imgs/favBrand1.jpeg" class="w-full object-cover h-full" alt="favBrand1" />
-    <div class="absolute bottom-8 ml-20 text-white font-semibold text-5xl font-Kavoon">
-      Wellen
-    </div>
-  </div>
-</div>
+              <!-- First Slide -->
+              <div class="w-full flex gap-4 shrink-0 overflow-x-auto">
+                <!-- fav 1 -->
+                <div class="relative w-[316px] h-[430px]">
+                  <img src="./imgs/favBrand4.jpeg" class="w-full object-cover h-full" alt="favBrand1" />
+                  <div class="absolute bottom-8 ml-4 text-white font-semibold text-2xl font-nerko">
+                    FLINT AND TINDER
+                  </div>
+                </div>
+
+                <!-- fav 2 -->
+                <div class="relative w-[316px] h-[430px]">
+                  <img src="./imgs/pants3.jpeg" class="w-full object-cover h-full" alt="pants3" />
+                  <div class="absolute bottom-8 ml-14 text-white font-normal font-kaushan text-5xl">
+                    artolflex
+                  </div>
+                </div>
+
+                <!-- fav 3 -->
+                <div class="relative w-[316px] h-[430px]">
+                  <img src="./imgs/favBrand2.jpeg" class="w-full object-cover h-full" alt="pants3" />
+                  <div class="absolute bottom-8 ml-12 text-white font-normal text-5xl font-nerko">
+                    RELWEN
+                  </div>
+                </div>
+
+                <!-- fav 4 -->
+                <div class="relative w-[316px] h-[430px]">
+                  <img src="./imgs/favBrand1.jpeg" class="w-full object-cover h-full" alt="favBrand1" />
+                  <div class="absolute bottom-8 ml-20 text-white font-semibold text-5xl font-Kavoon">
+                    Wellen
+                  </div>
+                </div>
+              </div>
               <!-- Second Slide -->
               <div class="w-full flex gap-4 shrink-0">
                 <!-- fav 5 -->
@@ -830,7 +830,7 @@
                     Todd Snyder
                   </div>
                 </div>
-                
+
                 <!-- fav 6 -->
                 <div class="relative w-[316px] h-[430px]">
                   <img src="./imgs/modell3.jpeg" class="w-full object-cover h-full" alt="modell3" />
@@ -838,7 +838,7 @@
                     BONOBOS
                   </div>
                 </div>
-                
+
                 <!-- fav 7 -->
                 <div class="relative w-[316px] h-[430px]">
                   <img src="./imgs/nikeShoes.jpg" class="w-full object-cover h-full" alt="nikeShoes" />
@@ -846,7 +846,7 @@
                     NIKE
                   </div>
                 </div>
-                
+
                 <!-- fav 8 -->
                 <div class="relative w-[316px] h-[430px]">
                   <img src="./imgs/download.jpeg" class="w-full object-cover h-full" alt="Sneakers" />

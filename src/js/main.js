@@ -218,3 +218,31 @@ function toggleSave(element) {
     element.classList.add('fa-regular');
   }
 }
+
+function changeJacketColor(){
+  document.getElementById("blueJacket").setAttribute("src","./imgs/jacket-removebg.png")
+}
+
+function backToblueJacket(){
+  document.getElementById("blueJacket").setAttribute("src","./imgs/jacket.png")
+}
+
+
+function changepantsColor(){
+  document.getElementById("greenJacket").setAttribute("src","./imgs/redpants.png")
+}
+
+
+function backToJacketColor(){
+  document.getElementById("greenJacket").setAttribute("src","./imgs/pants2.png")
+}
+
+
+function changepolColor(){
+  document.getElementById("sleevesPol").setAttribute("src","./imgs/bluepol.png")
+}
+
+
+function backTopolColor(){
+  document.getElementById("sleevesPol").setAttribute("src","./imgs/sleeves.png")
+}
