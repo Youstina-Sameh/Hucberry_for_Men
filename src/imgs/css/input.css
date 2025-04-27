@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.yellow-underline {
+    text-decoration: underline;
+    text-decoration-color: #F7B801;
+  }
