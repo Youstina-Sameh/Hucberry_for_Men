@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.querySelectorAll(".slider-button");
   let currentSlide = 0;
   let slideInterval;
-  
+
   function showSlide(index) {
     // Hide all slides and show only the current one
     slides.forEach((slide, i) => {
       slide.classList.toggle("hidden", i !== index);
     });
-    
+
     // Update all buttons - set active button to white, others to gray
     buttons.forEach((btn, i) => {
       if (i === index) {
@@ -20,51 +20,51 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.classList.add("border-2", "border-white", "bg-transparent");
       }
     });
-    
+
     currentSlide = index;
   }
-  
+
   function prevSlide() {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     showSlide(currentSlide);
   }
-  
+
   function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
   }
-  
+
   function startSlider() {
     slideInterval = setInterval(nextSlide, 4000);
   }
-  
+
   function resetSlider(index) {
     clearInterval(slideInterval);
     showSlide(index);
     startSlider();
   }
-  
+
   // Initialize: set first button as active
   showSlide(0);
-  
+
   // Add click events to indicator buttons
   buttons.forEach((btn, index) => {
     btn.addEventListener("click", () => resetSlider(index));
   });
-  
+
   // Add click events to prev/next buttons
-  document.getElementById("prev").addEventListener("click", function() {
+  document.getElementById("prev").addEventListener("click", function () {
     clearInterval(slideInterval);
     prevSlide();
     startSlider();
   });
-  
-  document.getElementById("next").addEventListener("click", function() {
+
+  document.getElementById("next").addEventListener("click", function () {
     clearInterval(slideInterval);
     nextSlide();
     startSlider();
   });
-  
+
   // Start automatic slideshow
   startSlider();
 });
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  
+
   //Fav Prand carousel
   let favPrand_currentIndex = 0;
   const favPrand_track = document.getElementById("favPrand-carousel-track");
@@ -154,9 +154,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const favPrand_slides = favPrand_track.children;
   const favPrand_totalSlides = favPrand_slides.length;
   function updatefavPrandCarousel() {
-   favPrand_track.style.transform = `translateX(-${favPrand_currentIndex * 100}%)`;
-   favPrand_prevBtn.style.display = favPrand_currentIndex === 0 ? "none" : "block";
-   favPrand_nextBtn.style.display = favPrand_currentIndex === favPrand_totalSlides - 1 ? "none" : "block";
+    favPrand_track.style.transform = `translateX(-${favPrand_currentIndex * 100}%)`;
+    favPrand_prevBtn.style.display = favPrand_currentIndex === 0 ? "none" : "block";
+    favPrand_nextBtn.style.display = favPrand_currentIndex === favPrand_totalSlides - 1 ? "none" : "block";
   }
   favPrand_prevBtn.addEventListener("click", function () {
     if (favPrand_currentIndex > 0) {
@@ -177,34 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Toggle Save Icon 
 function toggleSave(element) {
   element.classList.toggle('clicked');
@@ -219,30 +191,30 @@ function toggleSave(element) {
   }
 }
 
-function changeJacketColor(){
-  document.getElementById("blueJacket").setAttribute("src","./imgs/jacket-removebg.png")
+function changeJacketColor() {
+  document.getElementById("blueJacket").setAttribute("src", "./src/imgs/jacket-removebg.png")
 }
 
-function backToblueJacket(){
-  document.getElementById("blueJacket").setAttribute("src","./imgs/jacket.png")
-}
-
-
-function changepantsColor(){
-  document.getElementById("greenJacket").setAttribute("src","./imgs/redpants.png")
+function backToblueJacket() {
+  document.getElementById("blueJacket").setAttribute("src", "./src/imgs/jacket.png")
 }
 
 
-function backToJacketColor(){
-  document.getElementById("greenJacket").setAttribute("src","./imgs/pants2.png")
+function changepantsColor() {
+  document.getElementById("greenJacket").setAttribute("src", "./src/imgs/redpants.png")
 }
 
 
-function changepolColor(){
-  document.getElementById("sleevesPol").setAttribute("src","./imgs/bluepol.png")
+function backToJacketColor() {
+  document.getElementById("greenJacket").setAttribute("src", "./src/imgs/pants2.png")
 }
 
 
-function backTopolColor(){
-  document.getElementById("sleevesPol").setAttribute("src","./imgs/sleeves.png")
+function changepolColor() {
+  document.getElementById("sleevesPol").setAttribute("src", "./src/imgs/bluepol.png")
+}
+
+
+function backTopolColor() {
+  document.getElementById("sleevesPol").setAttribute("src", "./src/imgs/sleeves.png")
 }
